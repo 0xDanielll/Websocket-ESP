@@ -4,7 +4,8 @@
 
     <script>
     "use strict"
-    var ws;
+    ws = new WebSocket("ws://xx.xx.xx.xx:yyyy/service/audioHandler");
+    ws.binaryData = "blob";
     function WebSocketTest()
     {
       if ("WebSocket" in window)
@@ -15,8 +16,7 @@
          ws.onopen = function()
          {
             // Web Socket is connected, send data using send() 
-            ws.send(JSON.stringify({userName:'xxxx',password:'sgdfgdfgdfgdfgdf'}));
-            console.log("Message is sent...");
+            ws.send("HELLOOO"); // Blob object
          };
          ws.onmessage = function (evt)
          {
