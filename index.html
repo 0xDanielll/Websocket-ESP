@@ -1,41 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head> 
+<script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
 
-    <script>
-    "use strict"
-    function WebSocketTest()
-    {
-      if ("WebSocket" in window)
-      {
-         ws = new WebSocket("103.22.147.144:3333");
-         ws.onopen = function()
-         {
-            // Web Socket is connected, send data using send() 
-            ws.send("HELLOOO"); // Blob object
-         };
-         ws.onmessage = function (evt)
-         {
-            var received_msg = evt.data;
-            console.log("Message is received...");
-         };
-         ws.onclose = function()
-         {
-            // websocket is closed.
-            console.log("Connection is closed...");
-         };
-      }
-      else
-      {
-         // The browser doesn't support WebSocket
-         console.log("WebSocket NOT supported by your Browser!");
-      }
-    }
+    
+<script>
+function NUTT() {
+
+var socket = io.connect('103.22.147.144:3333
+socket.on('connect', function () {
+  socket.send('hi');
+
+  socket.on('message', function (msg) {
+    // my msg
+  });
+});}
+
 </script>
 
 </head>
 <body>
-<input type="button" value="Connect" onclick="WebSocketTest()" />
+<input type="button" value="Connect" onclick="NUTT()" />
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
 
