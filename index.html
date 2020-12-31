@@ -2,7 +2,14 @@
 <html>
 <head> 
 
-<script src="socket.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('103.22.147.144:3333');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
 
 </head>
 <body>
