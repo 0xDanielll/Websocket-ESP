@@ -4,15 +4,11 @@
 
     <script>
     "use strict"
-    ws = new WebSocket("ws://xx.xx.xx.xx:yyyy/service/audioHandler");
-    ws.binaryData = "blob";
     function WebSocketTest()
     {
       if ("WebSocket" in window)
       {
-         console.log("WebSocket is supported by your Browser!");
-         // Let us open a web socket
-         ws = new WebSocket("ws://xx.xx.xx.xx:yyyy/service/audioHandler");
+         ws = new WebSocket("103.22.147.144:3333");
          ws.onopen = function()
          {
             // Web Socket is connected, send data using send() 
