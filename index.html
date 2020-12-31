@@ -2,7 +2,7 @@
 <html>
 <head> 
 
-<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
 <script>
   var socket = io.connect('103.22.147.144:3333');
   socket.on('news', function (data) {
@@ -13,8 +13,6 @@
 
 </head>
 <body>
-
-<canvas id="yeet" height="1080" width="1920"></canvas>
 
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
