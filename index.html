@@ -1,22 +1,18 @@
 <html>
 <head>
 <script>
-var myURL = "103.22.146.58:3000";
-
-function testConnection(url) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onload = function() { alert("Connected!"); }
-    xmlhttp.onerror = function() { alert("Not Connected"); }
-    xmlhttp.open("GET", myURL,true);
-    xmlhttp.send();
-}
+    function yeet() {
+    xhttp.open("GET", "103.22.146.58:3000", true);
+    xhttp.send();
+    alert('tested');}
+    
 </script>
     
 </head>
 <body>
 
 
-<button type="button" onclick="testConnection(myURL)">Test Connection</button>
+<button type="button" onclick="yeet()">Test Connection</button>
 
 </body>
 </html>
