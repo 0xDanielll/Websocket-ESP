@@ -3,18 +3,18 @@
 <script>
    
     
-    function yeet() {
-        
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-        if (xhr.readyState == XMLHttpRequest.DONE) {
-            alert(xhr.responseText);
-        }
-    }
-    xhr.open('GET', 'http://example.com', true);
-    xhr.send(null);
+function yeet(){
+    var request = new XMLHttpRequest();
 
-    }
+    request.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        }
+    };
+
+    request.open('GET', 'https://google.com.au');
+    request.send();
+}
     
 </script>
     
