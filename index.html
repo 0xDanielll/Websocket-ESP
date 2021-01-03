@@ -1,9 +1,7 @@
 <html>
 <head>
 <script>
-   
-    
-function yeet(){
+   window.onload = function(){
     var request = new XMLHttpRequest();
 
     request.onreadystatechange = function() {
@@ -12,10 +10,9 @@ function yeet(){
         }
     };
 
-    request.open('GET', 'https://google.com.au');
+    request.open('GET', 'https://jsonplaceholder.typicode.com/users/1');
     request.send();
 }
-    
 </script>
     
 </head>
