@@ -2,12 +2,17 @@
 <head>
 <script>
     
-    var xhttp = new XMLHttpRequest();
-    
     function yeet() {
-        xhttp.open("GET", "103.22.146.58:3000", true);
-        xhttp.send();
-        alert('tested');
+        
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+        alert(xhr.responseText);
+    }
+}
+xhr.open('GET', 'http://example.com', true);
+xhr.send(null);
+
     }
     
 </script>
