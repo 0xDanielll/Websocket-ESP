@@ -1,25 +1,29 @@
 <html>
 <head>
 <script>
-   window.onload = function(){
-    var request = new XMLHttpRequest();
+   function yeet(){
+   
+         // Create WebSocket connection.
+      var socket = new WebSocket('ws://127.0.0.1:3000');
 
-    request.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            alert(this.responseText);
-        }
-    };
+      // Connection opened
+      socket.addEventListener('open', function (event) {
+          socket.send('Hello Server!');
+      });
 
-    request.open('GET', 'https://www.google.com/');
-    request.send();
-}
+      // Listen for messages
+      socket.addEventListener('message', function (event) {
+          console.log('Message from server ', event.data);
+      });   
+   
+   }
 </script>
     
 </head>
 <body>
 
 
-<button type="button" onclick="">Test Connection</button>
+<button type="button" onclick="yeet()">Test Connection</button>
 
 </body>
 </html>
